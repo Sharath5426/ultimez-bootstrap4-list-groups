@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Tooltip</title>
+
+    <!-- Bootstrap 4 CSS - Local File -->
+    <link
+        rel="stylesheet"
+        href="../task-04-bootstrap4-cdn-local/css/bootstrap.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1 class="mb-4">
+                    Bootstrap 4 Tooltip
+                </h1>
+
+                <p>
+                    Hover over the button below to display the tooltip.
+                </p>
+
+                <!-- Bootstrap 4 Tooltip -->
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="This is a Bootstrap 4 tooltip!">
+
+                    Hover Over Me
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap 4 JavaScript - Local Files -->
+    <script src="../task-04-bootstrap4-cdn-local/js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="../task-04-bootstrap4-cdn-local/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Initialize Bootstrap Tooltip -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</body>
+
+</html>
