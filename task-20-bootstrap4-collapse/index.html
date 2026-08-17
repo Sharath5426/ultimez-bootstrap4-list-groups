@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Toggleable Collapse</title>
+
+    <!-- Bootstrap 4 CSS - Local File -->
+    <link
+        rel="stylesheet"
+        href="../task-04-bootstrap4-cdn-local/css/bootstrap.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1 class="mb-4">
+                    Bootstrap 4 Toggleable Collapse
+                </h1>
+
+                <p>
+                    Click the button below to show or hide the content.
+                </p>
+
+                <!-- Collapse Toggle Button -->
+                <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseContent"
+                    aria-expanded="false"
+                    aria-controls="collapseContent">
+
+                    Show / Hide Content
+
+                </button>
+
+                <!-- Collapsible Content -->
+                <div
+                    class="collapse mt-3"
+                    id="collapseContent">
+
+                    <div class="card card-body">
+
+                        <h4>
+                            Collapsible Content
+                        </h4>
+
+                        <p>
+                            This content can be shown and hidden by
+                            clicking the Bootstrap 4 collapse button.
+                            The collapse component provides a simple
+                            way to toggle the visibility of content.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap 4 JavaScript - Local Files -->
+    <script src="../task-04-bootstrap4-cdn-local/js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="../task-04-bootstrap4-cdn-local/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
