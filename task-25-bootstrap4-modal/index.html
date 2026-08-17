@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Basic Modal</title>
+
+    <!-- Bootstrap 4 CSS - Local File -->
+    <link
+        rel="stylesheet"
+        href="../task-04-bootstrap4-cdn-local/css/bootstrap.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1 class="mb-4">
+                    Bootstrap 4 Basic Modal
+                </h1>
+
+                <!-- Button to Open Modal -->
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#basicModal">
+
+                    Open Modal
+
+                </button>
+
+
+                <!-- Basic Modal -->
+                <div
+                    class="modal fade"
+                    id="basicModal"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="basicModalLabel"
+                    aria-hidden="true">
+
+                    <div
+                        class="modal-dialog"
+                        role="document">
+
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+
+                                <h5
+                                    class="modal-title"
+                                    id="basicModalLabel">
+
+                                    Bootstrap 4 Modal
+
+                                </h5>
+
+                                <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+
+                                    <span aria-hidden="true">
+                                        &times;
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Modal Body -->
+                            <div class="modal-body">
+
+                                <p>
+                                    This is a basic Bootstrap 4 modal
+                                    component. Modal content can be
+                                    displayed when the user clicks the
+                                    Open Modal button.
+                                </p>
+
+                            </div>
+
+
+                            <!-- Modal Footer -->
+                            <div class="modal-footer">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-dismiss="modal">
+
+                                    Close
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap 4 JavaScript - Local Files -->
+    <script src="../task-04-bootstrap4-cdn-local/js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="../task-04-bootstrap4-cdn-local/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
