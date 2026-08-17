@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Variables and Scope - Rectangle Area</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculate Area of a Rectangle</h1>
+
+    <p>
+        Click the button to calculate the area.
+    </p>
+
+    <button onclick="calculateArea()">
+        Calculate Area
+    </button>
+
+    <p id="result"></p>
+
+
+    <script>
+        function calculateArea() {
+
+            let length = 10;
+            let width = 5;
+
+            let area = length * width;
+
+            document.getElementById("result").textContent =
+                "Length: " + length +
+                " | Width: " + width +
+                " | Area: " + area;
+        }
+    </script>
+
+</body>
+
+</html>
