@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks and Asynchronous JavaScript</title>
+</head>
+
+<body>
+
+    <h2>Callbacks and Asynchronous JavaScript</h2>
+
+    <p id="demo"></p>
+
+    <button type="button" onclick="runCalculations()">Calculate</button>
+
+    <script>
+
+        // Function that performs an operation
+        // and passes the result to a callback function
+        function calculate(num1, num2, operation, callback) {
+
+            let result;
+
+            if (operation === "add") {
+                result = num1 + num2;
+
+            } else if (operation === "subtract") {
+                result = num1 - num2;
+
+            } else if (operation === "multiply") {
+                result = num1 * num2;
+
+            } else if (operation === "divide") {
+                result = num1 / num2;
+
+            } else {
+                result = "Invalid operation";
+            }
+
+            // Call the callback with the result
+            callback(result);
+        }
+
+
+        // Callback function
+        function displayResult(result) {
+            console.log("Result:", result);
+
+            document.getElementById("demo").innerHTML +=
+                "Result: " + result + "<br>";
+        }
+
+
+        // Test the calculate function
+        function runCalculations() {
+
+            document.getElementById("demo").innerHTML = "";
+
+            calculate(10, 5, "add", displayResult);
+
+            calculate(10, 5, "subtract", displayResult);
+
+            calculate(10, 5, "multiply", displayResult);
+
+            calculate(10, 5, "divide", displayResult);
+        }
+
+    </script>
+
+</body>
+
+</html>
