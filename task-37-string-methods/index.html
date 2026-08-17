@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>String and Its Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .result {
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>String and Its Methods</h1>
+
+    <div id="results"></div>
+
+    <script>
+        function analyzeString(input) {
+
+            const text = String(input);
+
+            const lowerText = text.toLowerCase();
+            const upperText = text.toUpperCase();
+
+            const containsJavaScript =
+                lowerText.includes("javascript");
+
+            const letterACount =
+                (lowerText.match(/a/g) || []).length;
+
+            return {
+                length: text.length,
+                lowercase: lowerText,
+                uppercase: upperText,
+                containsJavaScript: containsJavaScript,
+                letterACount: letterACount
+            };
+        }
+
+
+        const inputString =
+            "JavaScript is a powerful language. I love JavaScript and learning JavaScript.";
+
+
+        const result = analyzeString(inputString);
+
+
+        document.getElementById("results").innerHTML = `
+            <div class="result">
+                <strong>Original String:</strong>
+                ${inputString}
+            </div>
+
+            <div class="result">
+                <strong>Length:</strong>
+                ${result.length}
+            </div>
+
+            <div class="result">
+                <strong>Lowercase:</strong>
+                ${result.lowercase}
+            </div>
+
+            <div class="result">
+                <strong>Uppercase:</strong>
+                ${result.uppercase}
+            </div>
+
+            <div class="result">
+                <strong>Contains "JavaScript":</strong>
+                ${result.containsJavaScript}
+            </div>
+
+            <div class="result">
+                <strong>Number of letter 'a':</strong>
+                ${result.letterACount}
+            </div>
+        `;
+    </script>
+
+</body>
+
+</html>
