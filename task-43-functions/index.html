@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Functions</h2>
+
+    <p id="demo"></p>
+
+    <button type="button" onclick="testReverseString()">Click me!</button>
+
+    <script>
+
+        // Define reverseString function
+        function reverseString(str) {
+
+            // Reverse the string using built-in methods
+            return str.split("").reverse().join("");
+        }
+
+
+        // Test the function with different strings
+        function testReverseString() {
+
+            const result1 = reverseString("Hello");
+            const result2 = reverseString("JavaScript");
+            const result3 = reverseString("Ultimez");
+
+            console.log("Hello:", result1);
+            console.log("JavaScript:", result2);
+            console.log("Ultimez:", result3);
+
+            document.getElementById("demo").innerHTML =
+                "Hello → " + result1 +
+                "<br>JavaScript → " + result2 +
+                "<br>Ultimez → " + result3;
+        }
+
+    </script>
+
+</body>
+
+</html>
