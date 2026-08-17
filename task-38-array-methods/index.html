@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Array and Its Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .result {
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Array and Its Methods</h1>
+
+    <div id="results"></div>
+
+    <script>
+
+        // 1. Initialize the array
+        let numbers = [10, 5, 8, 3, 12, 6];
+
+        // 2. Print the original length
+        console.log("Original array:", numbers);
+        console.log("Length of array:", numbers.length);
+
+        // 3. Add 7 to the end
+        numbers.push(7);
+        console.log("After adding 7:", numbers);
+
+        // 4. Remove the first element
+        numbers.shift();
+        console.log("After removing first element:", numbers);
+
+        // 5. Sort in ascending order
+        numbers.sort(function(a, b) {
+            return a - b;
+        });
+        console.log("After ascending sort:", numbers);
+
+        // 6. Reverse the array
+        numbers.reverse();
+        console.log("After reversing:", numbers);
+
+        // 7. Check if number 8 exists
+        if (numbers.includes(8)) {
+            console.log("Number 8 exists");
+        } else {
+            console.log("Number 8 doesn't exist");
+        }
+
+        // 8. Find index of number 12
+        const indexOf12 = numbers.indexOf(12);
+        console.log("Index of number 12:", indexOf12);
+
+        // 9. Create doubledNumbers array
+        const doubledNumbers = numbers.map(function(number) {
+            return number * 2;
+        });
+
+        // 10. Print doubled numbers
+        console.log("Doubled numbers:", doubledNumbers);
+
+
+        // Display results on webpage
+        document.getElementById("results").innerHTML = `
+            <div class="result">
+                <strong>Original Array:</strong>
+                <code>[10, 5, 8, 3, 12, 6]</code>
+            </div>
+
+            <div class="result">
+                <strong>Original Length:</strong>
+                6
+            </div>
+
+            <div class="result">
+                <strong>After Adding 7:</strong>
+                <code>[10, 5, 8, 3, 12, 6, 7]</code>
+            </div>
+
+            <div class="result">
+                <strong>After Removing First Element:</strong>
+                <code>[5, 8, 3, 12, 6, 7]</code>
+            </div>
+
+            <div class="result">
+                <strong>After Ascending Sort:</strong>
+                <code>[3, 5, 6, 7, 8, 12]</code>
+            </div>
+
+            <div class="result">
+                <strong>After Reverse:</strong>
+                <code>[12, 8, 7, 6, 5, 3]</code>
+            </div>
+
+            <div class="result">
+                <strong>Number 8 Check:</strong>
+                Number 8 exists
+            </div>
+
+            <div class="result">
+                <strong>Index of Number 12:</strong>
+                ${indexOf12}
+            </div>
+
+            <div class="result">
+                <strong>Doubled Numbers:</strong>
+                <code>${doubledNumbers.join(", ")}</code>
+            </div>
+        `;
+
+    </script>
+
+</body>
+
+</html>
