@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Array Methods - Names</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .result {
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Array and Its Methods - Names</h1>
+
+    <div id="results"></div>
+
+    <script>
+
+        // 1. Initialize the names array
+        let names = ["John", "Jane", "Doe", "Alice", "Bob"];
+
+        // 2. Print all names to the console
+        console.log("Original names:");
+
+        names.forEach(function(name) {
+            console.log(name);
+        });
+
+        // 3. Add Eve to the end
+        names.push("Eve");
+
+        console.log("After adding Eve:", names);
+
+        // 4. Remove Doe
+        const doeIndex = names.indexOf("Doe");
+
+        if (doeIndex !== -1) {
+            names.splice(doeIndex, 1);
+        }
+
+        console.log("After removing Doe:", names);
+
+        // 5. Sort alphabetically
+        names.sort();
+
+        console.log("Alphabetically sorted names:", names);
+
+        // 6. Check if Alice exists
+        if (names.includes("Alice")) {
+            console.log("Alice is present");
+        } else {
+            console.log("Alice is not present");
+        }
+
+        // 7. Convert all names to uppercase
+        const uppercaseNames = names.map(function(name) {
+            return name.toUpperCase();
+        });
+
+        // 8. Print uppercaseNames
+        console.log("Uppercase names:", uppercaseNames);
+
+
+        // Display results on webpage
+        document.getElementById("results").innerHTML = `
+            <div class="result">
+                <strong>Original Names:</strong>
+                <code>John, Jane, Doe, Alice, Bob</code>
+            </div>
+
+            <div class="result">
+                <strong>After Adding Eve:</strong>
+                <code>${["John", "Jane", "Doe", "Alice", "Bob", "Eve"].join(", ")}</code>
+            </div>
+
+            <div class="result">
+                <strong>After Removing Doe:</strong>
+                <code>${["John", "Jane", "Alice", "Bob", "Eve"].join(", ")}</code>
+            </div>
+
+            <div class="result">
+                <strong>Alphabetical Order:</strong>
+                <code>${names.join(", ")}</code>
+            </div>
+
+            <div class="result">
+                <strong>Alice Check:</strong>
+                Alice is present
+            </div>
+
+            <div class="result">
+                <strong>Uppercase Names:</strong>
+                <code>${uppercaseNames.join(", ")}</code>
+            </div>
+        `;
+
+    </script>
+
+</body>
+
+</html>
