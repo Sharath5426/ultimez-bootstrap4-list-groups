@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional and Looping Statements</title>
+</head>
+
+<body>
+
+    <h2>A Javascript Example</h2>
+
+    <p id="demo"></p>
+
+    <button type="button" onclick="myFunc()">Click me!</button>
+
+    <script>
+
+        function myFunc() {
+
+            // ==========================================
+            // CONDITIONAL STATEMENTS
+            // ==========================================
+
+            // if statement
+            let age = 20;
+
+            if (age >= 18) {
+                console.log("You are an adult");
+            }
+
+
+            // if - else statement
+            let number = 10;
+
+            if (number > 0) {
+                console.log("Number is positive");
+            } else {
+                console.log("Number is not positive");
+            }
+
+
+            // if - else if - else statement
+            let marks = 75;
+
+            if (marks >= 90) {
+                console.log("Grade A");
+            } else if (marks >= 60) {
+                console.log("Grade B");
+            } else {
+                console.log("Grade C");
+            }
+
+
+            // ==========================================
+            // FOR LOOP
+            // ==========================================
+
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+
+
+            // ==========================================
+            // FOR...IN LOOP
+            // ==========================================
+
+            const details = {
+                company_name: "Ultimez",
+                course: "JS"
+            };
+
+            for (const key in details) {
+                console.log(key + ": " + details[key]);
+            }
+
+
+            // ==========================================
+            // FOR...OF LOOP
+            // ==========================================
+
+            const colors = ["red", "green", "blue"];
+
+            for (const eachColor of colors) {
+                console.log(eachColor);
+            }
+
+
+            // ==========================================
+            // WHILE LOOP
+            // ==========================================
+
+            let count = 0;
+
+            while (count < 3) {
+                console.log(count);
+                count++;
+            }
+
+
+            // ==========================================
+            // DO...WHILE LOOP
+            // ==========================================
+
+            let num = 0;
+
+            do {
+                console.log(num);
+                num++;
+            } while (num < 3);
+
+
+            // ==========================================
+            // DISPLAY MESSAGE
+            // ==========================================
+
+            document.getElementById("demo").innerHTML =
+                "Conditional and looping statements executed successfully. Check the browser console.";
+        }
+
+    </script>
+
+</body>
+
+</html>
