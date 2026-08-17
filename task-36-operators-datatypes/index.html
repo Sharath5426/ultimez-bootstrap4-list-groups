@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Operators and Datatypes - Calculate Age</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .result {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculate Age - Operators and Datatypes</h1>
+
+    <div id="results"></div>
+
+    <script>
+        function calculateAge(birthYear, currentYear) {
+
+            birthYear = Number(birthYear);
+            currentYear = Number(currentYear);
+
+            if (isNaN(birthYear) || isNaN(currentYear)) {
+                return "Invalid year provided.";
+            }
+
+            let age = currentYear - birthYear;
+
+            return "You are " + age + " years old.";
+        }
+
+
+        const testCases = [
+            [1990, 2024],
+            [2000, 1995],
+            [1995, "2024"],
+            ["1995", 2024],
+            ["abcd", "xyz"]
+        ];
+
+
+        const results = document.getElementById("results");
+
+        testCases.forEach(function (testCase, index) {
+
+            const birthYear = testCase[0];
+            const currentYear = testCase[1];
+
+            const result = calculateAge(birthYear, currentYear);
+
+            results.innerHTML +=
+                "<div class='result'>" +
+                "<strong>Test Case " + (index + 1) + ":</strong> " +
+                "calculateAge(" +
+                JSON.stringify(birthYear) +
+                ", " +
+                JSON.stringify(currentYear) +
+                ") → " +
+                result +
+                "</div>";
+        });
+    </script>
+
+</body>
+
+</html>
