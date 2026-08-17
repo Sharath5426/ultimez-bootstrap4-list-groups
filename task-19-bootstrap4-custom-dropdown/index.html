@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Custom Dropdown</title>
+
+    <!-- Bootstrap 4 CSS - Local File -->
+    <link
+        rel="stylesheet"
+        href="../task-04-bootstrap4-cdn-local/css/bootstrap.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1 class="mb-4">
+                    Custom Dropdown Using Bootstrap 4
+                </h1>
+
+                <p class="mb-3">
+                    Select an option from the dropdown:
+                </p>
+
+                <!-- Custom Bootstrap Dropdown -->
+                <div class="dropdown">
+
+                    <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="courseDropdown"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+
+                        Select a Course
+
+                    </button>
+
+                    <div
+                        class="dropdown-menu"
+                        aria-labelledby="courseDropdown">
+
+                        <a class="dropdown-item" href="#">
+                            Java
+                        </a>
+
+                        <a class="dropdown-item" href="#">
+                            Python
+                        </a>
+
+                        <a class="dropdown-item" href="#">
+                            Web Development
+                        </a>
+
+                        <a class="dropdown-item" href="#">
+                            Machine Learning
+                        </a>
+
+                        <a class="dropdown-item" href="#">
+                            Data Science
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap 4 JavaScript - Local Files -->
+    <script src="../task-04-bootstrap4-cdn-local/js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="../task-04-bootstrap4-cdn-local/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
