@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Objects, Sets and Maps</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .result {
+            margin: 8px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Objects, Sets and Maps</h1>
+
+
+    <!-- ========================= -->
+    <!-- OBJECTS -->
+    <!-- ========================= -->
+
+    <section>
+
+        <h2>1. Objects</h2>
+
+        <div id="objectsResult"></div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- SETS -->
+    <!-- ========================= -->
+
+    <section>
+
+        <h2>2. Sets</h2>
+
+        <div id="setsResult"></div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- MAPS -->
+    <!-- ========================= -->
+
+    <section>
+
+        <h2>3. Maps</h2>
+
+        <div id="mapsResult"></div>
+
+    </section>
+
+
+    <script>
+
+        /* ==================================================
+           1. OBJECTS
+           ================================================== */
+
+        // Create person object
+        function Person(name, age, gender, occupation) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.occupation = occupation;
+        }
+
+        // Create two instances
+        const person1 = new Person(
+            "John",
+            25,
+            "Male",
+            "Software Developer"
+        );
+
+        const person2 = new Person(
+            "Alice",
+            28,
+            "Female",
+            "Data Analyst"
+        );
+
+        // Print person details
+        console.log("Person 1:", person1);
+        console.log("Person 2:", person2);
+
+        document.getElementById("objectsResult").innerHTML = `
+            <div class="result">
+                <strong>Person 1</strong><br>
+                Name: ${person1.name}<br>
+                Age: ${person1.age}<br>
+                Gender: ${person1.gender}<br>
+                Occupation: ${person1.occupation}
+            </div>
+
+            <div class="result">
+                <strong>Person 2</strong><br>
+                Name: ${person2.name}<br>
+                Age: ${person2.age}<br>
+                Gender: ${person2.gender}<br>
+                Occupation: ${person2.occupation}
+            </div>
+        `;
+
+
+        /* ==================================================
+           2. SETS
+           ================================================== */
+
+        // Function to create a Set containing unique numbers
+        function createUniqueSet(numbers) {
+            return new Set(numbers);
+        }
+
+
+        // Union of two sets
+        function union(setA, setB) {
+            return new Set([...setA, ...setB]);
+        }
+
+
+        // Intersection of two sets
+        function intersection(setA, setB) {
+            return new Set(
+                [...setA].filter(value => setB.has(value))
+            );
+        }
+
+
+        // Difference of two sets
+        function difference(setA, setB) {
+            return new Set(
+                [...setA].filter(value => !setB.has(value))
+            );
+        }
+
+
+        // Check whether one set is a subset of another
+        function isSubset(setA, setB) {
+            return [...setA].every(value => setB.has(value));
+        }
+
+
+        // Input array
+        const numberArray = [
+            1, 2, 2, 3, 4, 4, 5
+        ];
+
+        // Create unique Set
+        const uniqueNumbers = createUniqueSet(numberArray);
+
+
+        // Create two sets
+        const setA = new Set([1, 2, 3, 4]);
+        const setB = new Set([3, 4, 5, 6]);
+
+        // Perform operations
+        const unionResult = union(setA, setB);
+        const intersectionResult = intersection(setA, setB);
+        const differenceResult = difference(setA, setB);
+
+        const subsetResult = isSubset(
+            new Set([1, 2]),
+            setA
+        );
+
+
+        // Print sets to console
+        console.log("Unique Set:", uniqueNumbers);
+        console.log("Set A:", setA);
+        console.log("Set B:", setB);
+        console.log("Union:", unionResult);
+        console.log("Intersection:", intersectionResult);
+        console.log("Difference:", differenceResult);
+        console.log("Is subset:", subsetResult);
+
+
+        // Display Set results
+        document.getElementById("setsResult").innerHTML = `
+            <div class="result">
+                <strong>Original Array:</strong>
+                <code>[1, 2, 2, 3, 4, 4, 5]</code>
+            </div>
+
+            <div class="result">
+                <strong>Unique Set:</strong>
+                <code>{${[...uniqueNumbers].join(", ")}}</code>
+            </div>
+
+            <div class="result">
+                <strong>Set A:</strong>
+                <code>{${[...setA].join(", ")}}</code>
+            </div>
+
+            <div class="result">
+                <strong>Set B:</strong>
+                <code>{${[...setB].join(", ")}}</code>
+            </div>
+
+            <div class="result">
+                <strong>Union:</strong>
+                <code>{${[...unionResult].join(", ")}}</code>
+            </div>
+
+            <div class="result">
+                <strong>Intersection:</strong>
+                <code>{${[...intersectionResult].join(", ")}}</code>
+            </div>
+
+            <div class="result">
+                <strong>Difference (A - B):</strong>
+                <code>{${[...differenceResult].join(", ")}}</code>
+            </div>
+
+            <div class="result">
+                <strong>Is {1, 2} a subset of Set A?</strong>
+                ${subsetResult}
+            </div>
+        `;
+
+
+        /* ==================================================
+           3. MAPS
+           ================================================== */
+
+        // Create a Map
+        const studentMap = new Map();
+
+        // Add key-value pairs
+        studentMap.set("name", "Sharath");
+        studentMap.set("course", "JavaScript");
+        studentMap.set("score", 85);
+
+        console.log("Initial Map:", studentMap);
+
+
+        // Access a value
+        const studentName = studentMap.get("name");
+
+        console.log("Student name:", studentName);
+
+
+        // Update a value
+        studentMap.set("score", 95);
+
+        console.log("Updated score:", studentMap.get("score"));
+
+
+        // Delete an entry
+        studentMap.delete("course");
+
+        console.log("Map after deleting course:", studentMap);
+
+
+        // Display Map results
+        document.getElementById("mapsResult").innerHTML = `
+            <div class="result">
+                <strong>Initial Map:</strong><br>
+                Name: Sharath<br>
+                Course: JavaScript<br>
+                Score: 85
+            </div>
+
+            <div class="result">
+                <strong>Accessed Name:</strong>
+                ${studentName}
+            </div>
+
+            <div class="result">
+                <strong>Updated Score:</strong>
+                ${studentMap.get("score")}
+            </div>
+
+            <div class="result">
+                <strong>After Deleting Course:</strong>
+                Course entry deleted successfully.
+            </div>
+        `;
+
+    </script>
+
+</body>
+
+</html>
