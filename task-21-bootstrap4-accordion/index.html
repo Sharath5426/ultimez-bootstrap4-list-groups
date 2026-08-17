@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Interactive Accordion</title>
+
+    <!-- Bootstrap 4 CSS - Local File -->
+    <link
+        rel="stylesheet"
+        href="../task-04-bootstrap4-cdn-local/css/bootstrap.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1 class="mb-4">
+                    Bootstrap 4 Interactive Accordion
+                </h1>
+
+                <div id="accordion">
+
+                    <!-- Accordion Item 1 -->
+                    <div class="card">
+
+                        <div class="card-header" id="headingOne">
+
+                            <h5 class="mb-0">
+
+                                <button
+                                    class="btn btn-link"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne">
+
+                                    What is Bootstrap 4?
+
+                                </button>
+
+                            </h5>
+
+                        </div>
+
+                        <div
+                            id="collapseOne"
+                            class="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent="#accordion">
+
+                            <div class="card-body">
+
+                                Bootstrap 4 is a popular front-end framework
+                                used to create responsive and mobile-friendly
+                                web pages.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Accordion Item 2 -->
+                    <div class="card">
+
+                        <div class="card-header" id="headingTwo">
+
+                            <h5 class="mb-0">
+
+                                <button
+                                    class="btn btn-link collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="collapseTwo">
+
+                                    What is an Accordion?
+
+                                </button>
+
+                            </h5>
+
+                        </div>
+
+                        <div
+                            id="collapseTwo"
+                            class="collapse"
+                            aria-labelledby="headingTwo"
+                            data-parent="#accordion">
+
+                            <div class="card-body">
+
+                                An accordion is a user interface component
+                                that allows users to expand and collapse
+                                sections of content.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Accordion Item 3 -->
+                    <div class="card">
+
+                        <div class="card-header" id="headingThree">
+
+                            <h5 class="mb-0">
+
+                                <button
+                                    class="btn btn-link collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="collapseThree">
+
+                                    Why use Bootstrap?
+
+                                </button>
+
+                            </h5>
+
+                        </div>
+
+                        <div
+                            id="collapseThree"
+                            class="collapse"
+                            aria-labelledby="headingThree"
+                            data-parent="#accordion">
+
+                            <div class="card-body">
+
+                                Bootstrap provides ready-made responsive
+                                components and utility classes that make
+                                web development faster and easier.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap 4 JavaScript - Local Files -->
+    <script src="../task-04-bootstrap4-cdn-local/js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="../task-04-bootstrap4-cdn-local/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
