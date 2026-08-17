@@ -1,99 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bootstrap 4 List Groups</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Cards</title>
 
     <!-- Bootstrap 4 CSS -->
     <link
         rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    >
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
 
     <div class="container mt-5">
 
-        <h1 class="text-center mb-4">
-            Bootstrap 4 List Groups
+        <!-- Page Heading -->
+        <h1 class="text-center mb-5">
+            Bootstrap 4 Cards
         </h1>
 
         <div class="row">
 
             <div class="col-md-12">
 
-                <!-- Basic List Group -->
-                <h3>1. Basic List Group</h3>
+                <!-- ============================= -->
+                <!-- 1. BASIC CARDS -->
+                <!-- ============================= -->
 
-                <ul class="list-group mb-4">
-                    <li class="list-group-item">HTML</li>
-                    <li class="list-group-item">CSS</li>
-                    <li class="list-group-item">JavaScript</li>
-                    <li class="list-group-item">Bootstrap</li>
-                </ul>
+                <h3 class="mb-3">1. Basic Cards</h3>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-4">
+
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    HTML
+                                </h5>
+
+                                <p class="card-text">
+                                    HTML is used to create the
+                                    structure of web pages.
+                                </p>
+
+                                <a href="#"
+                                   class="btn btn-primary">
+                                    Learn More
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
 
 
-                <!-- Active and Disabled Items -->
-                <h3>2. Active and Disabled Items</h3>
+                    <div class="col-md-4 mb-4">
 
-                <ul class="list-group mb-4">
-                    <li class="list-group-item active">
-                        Active Item
-                    </li>
+                        <div class="card">
 
-                    <li class="list-group-item">
-                        Normal Item
-                    </li>
+                            <div class="card-body">
 
-                    <li class="list-group-item disabled">
-                        Disabled Item
-                    </li>
-                </ul>
+                                <h5 class="card-title">
+                                    CSS
+                                </h5>
+
+                                <p class="card-text">
+                                    CSS is used to style and
+                                    design web pages.
+                                </p>
+
+                                <a href="#"
+                                   class="btn btn-success">
+                                    Learn More
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
 
-                <!-- Links and Buttons -->
-                <h3>3. Links and Buttons</h3>
+                    <div class="col-md-4 mb-4">
 
-                <div class="list-group mb-4">
+                        <div class="card">
 
-                    <a href="#" class="list-group-item list-group-item-action active">
-                        Active Link
-                    </a>
+                            <div class="card-body">
 
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Normal Link
-                    </a>
+                                <h5 class="card-title">
+                                    Bootstrap
+                                </h5>
 
-                    <button type="button" class="list-group-item list-group-item-action">
-                        Button Item
-                    </button>
+                                <p class="card-text">
+                                    Bootstrap provides ready-made
+                                    responsive components.
+                                </p>
+
+                                <a href="#"
+                                   class="btn btn-warning">
+                                    Learn More
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Flush List Group -->
-                <h3>4. Flush List Group</h3>
+                <!-- ============================= -->
+                <!-- 2. HEADER AND FOOTER -->
+                <!-- ============================= -->
 
-                <ul class="list-group list-group-flush mb-5">
-                    <li class="list-group-item">
-                        First Item
-                    </li>
+                <h3 class="mt-4 mb-3">
+                    2. Card with Header and Footer
+                </h3>
 
-                    <li class="list-group-item">
-                        Second Item
-                    </li>
+                <div class="card mb-5">
 
-                    <li class="list-group-item">
-                        Third Item
-                    </li>
+                    <div class="card-header bg-primary text-white">
+                        Featured Card
+                    </div>
 
-                    <li class="list-group-item">
-                        Fourth Item
-                    </li>
-                </ul>
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Bootstrap Card Header
+                        </h5>
+
+                        <p class="card-text">
+                            This card demonstrates a Bootstrap 4
+                            card containing a header, body and footer.
+                        </p>
+
+                        <a href="#"
+                           class="btn btn-primary">
+                            View Details
+                        </a>
+
+                    </div>
+
+                    <div class="card-footer text-muted">
+                        Last updated recently
+                    </div>
+
+                </div>
+
+
+                <!-- ============================= -->
+                <!-- 3. COMPLETE CARD -->
+                <!-- ============================= -->
+
+                <h3 class="mb-3">
+                    3. Complete Card
+                </h3>
+
+                <div class="card mb-5">
+
+                    <!-- Required card-img-top -->
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+                        class="card-img-top"
+                        alt="Computer workspace">
+
+                    <div class="card-header bg-dark text-white">
+                        Technology
+                    </div>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Complete Bootstrap 4 Card
+                        </h5>
+
+                        <p class="card-text">
+                            This complete card contains an image,
+                            header, card body, card title,
+                            description and button.
+                        </p>
+
+                        <a href="#"
+                           class="btn btn-dark">
+                            View Project
+                        </a>
+
+                    </div>
+
+                    <div class="card-footer text-muted">
+                        Bootstrap 4 Card Example
+                    </div>
+
+                </div>
 
             </div>
 
@@ -101,12 +207,21 @@
 
     </div>
 
+
     <!-- Bootstrap 4 JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
+    </script>
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
 
 </body>
+
 </html>
