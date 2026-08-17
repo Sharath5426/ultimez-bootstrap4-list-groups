@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 4 Nested Media Objects</title>
+
+    <!-- Bootstrap 4 CSS - Local File -->
+    <link
+        rel="stylesheet"
+        href="../task-04-bootstrap4-cdn-local/css/bootstrap.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-5">
+            Bootstrap 4 Nested Media Objects
+        </h1>
+
+        <!-- Main Media Object -->
+        <div class="media mb-4">
+
+            <img
+                src="https://placehold.co/100x100/007bff/ffffff?text=User"
+                class="mr-3 rounded-circle"
+                alt="Main User"
+                width="100"
+                height="100"
+            >
+
+            <div class="media-body">
+
+                <h5 class="mt-0">
+                    Main User
+                </h5>
+
+                <p>
+                    This is the main media object. It contains another
+                    media object inside it to demonstrate nesting.
+                </p>
+
+
+                <!-- Nested Media Object -->
+                <div class="media mt-4">
+
+                    <img
+                        src="https://placehold.co/80x80/28a745/ffffff?text=Reply"
+                        class="mr-3 rounded-circle"
+                        alt="Nested User"
+                        width="80"
+                        height="80"
+                    >
+
+                    <div class="media-body">
+
+                        <h5 class="mt-0">
+                            Nested User
+                        </h5>
+
+                        <p>
+                            This media object is nested inside the main
+                            media object. The Bootstrap media component
+                            keeps the image and content properly aligned.
+                        </p>
+
+
+                        <!-- Second Level Nested Media Object -->
+                        <div class="media mt-4">
+
+                            <img
+                                src="https://placehold.co/70x70/dc3545/ffffff?text=Reply"
+                                class="mr-3 rounded"
+                                alt="Second Nested User"
+                                width="70"
+                                height="70"
+                            >
+
+                            <div class="media-body">
+
+                                <h5 class="mt-0">
+                                    Second Nested User
+                                </h5>
+
+                                <p>
+                                    This is another nested media object,
+                                    demonstrating a hierarchical
+                                    Bootstrap 4 media layout.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap 4 JavaScript - Local Files -->
+    <script src="../task-04-bootstrap4-cdn-local/js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="../task-04-bootstrap4-cdn-local/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
