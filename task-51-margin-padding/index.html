@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margin and Padding</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .box {
+            background-color: #e8f4ff;
+            border: 3px solid #0066cc;
+
+            /* Margin on all four sides */
+            margin-top: 30px;
+            margin-right: 40px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+
+            /* Padding on all four sides */
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        .margin-example {
+            background-color: #fff3cd;
+            border: 2px solid #856404;
+
+            /* Margin shorthand: top right bottom left */
+            margin: 30px 40px 30px 40px;
+
+            /* Padding shorthand: top right bottom left */
+            padding: 20px 30px 20px 30px;
+        }
+
+        .comparison {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            flex: 1;
+            border: 2px solid #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .box,
+            .margin-example {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .comparison {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Margin and Padding</h1>
+
+        <div class="box">
+            <h2>Margin and Padding Example</h2>
+            <p>
+                Margin creates space outside an element.
+            </p>
+            <p>
+                Padding creates space inside an element.
+            </p>
+        </div>
+
+        <div class="margin-example">
+            <h2>Four-Side Example</h2>
+            <p>
+                This element uses margin and padding on the
+                top, right, bottom, and left sides.
+            </p>
+        </div>
+
+        <div class="comparison">
+
+            <div class="card">
+                <h2>Margin</h2>
+                <p>
+                    Margin creates space outside the border
+                    of an element.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Padding</h2>
+                <p>
+                    Padding creates space between the content
+                    and the border of an element.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
