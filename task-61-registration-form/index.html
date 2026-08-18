@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User registration form">
+    <title>User Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .gender-options,
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .gender-option,
+        .terms label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+        }
+
+        .gender-option input,
+        .terms input {
+            width: auto;
+        }
+
+        .password-help {
+            margin-top: 6px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0066cc;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .gender-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>User Registration</h1>
+
+        <p class="description">
+            Create your account by entering the required information.
+        </p>
+
+        <form>
+
+            <!-- First Name -->
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+
+                <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    placeholder="Enter your first name"
+                    required
+                    minlength="2"
+                    maxlength="30"
+                    autocomplete="given-name"
+                >
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+
+                <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    placeholder="Enter your last name"
+                    required
+                    minlength="2"
+                    maxlength="30"
+                    autocomplete="family-name"
+                >
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    autocomplete="email"
+                >
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter a strong password"
+                    required
+                    minlength="8"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                    title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character."
+                    autocomplete="new-password"
+                >
+
+                <p class="password-help">
+                    Minimum 8 characters with uppercase, lowercase,
+                    number, and special character.
+                </p>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    placeholder="Confirm your password"
+                    required
+                    minlength="8"
+                    autocomplete="new-password"
+                >
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required
+                >
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <div class="gender-options">
+
+                    <div class="gender-option">
+                        <input
+                            type="radio"
+                            id="male"
+                            name="gender"
+                            value="male"
+                            required
+                        >
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="gender-option">
+                        <input
+                            type="radio"
+                            id="female"
+                            name="gender"
+                            value="female"
+                        >
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="gender-option">
+                        <input
+                            type="radio"
+                            id="other"
+                            name="gender"
+                            value="other"
+                        >
+                        <label for="other">Other</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Country -->
+            <div class="form-group">
+
+                <label for="country">Country</label>
+
+                <select id="country" name="country" required>
+
+                    <option value="">Select your country</option>
+                    <option value="india">India</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+            </div>
+
+            <!-- Terms -->
+            <div class="form-group">
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        I agree to the terms and conditions.
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- Submit -->
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
