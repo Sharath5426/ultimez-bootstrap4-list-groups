@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tables and Position</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding-bottom: 70px;
+        }
+
+        /* Fixed Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 190px;
+            height: 100vh;
+            background-color: #222;
+            padding: 80px 15px 20px;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            color: white;
+            font-size: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            margin-left: 190px;
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            z-index: 900;
+        }
+
+        main {
+            margin-left: 190px;
+            padding: 30px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        /* Responsive Table */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #dceeff;
+        }
+
+        /* Relative Position */
+        .relative-box {
+            position: relative;
+            left: 30px;
+            top: 10px;
+            width: 200px;
+            padding: 20px;
+            background-color: #fff3cd;
+            border: 2px solid #856404;
+            margin: 20px 0 40px;
+        }
+
+        /* Absolute Position inside parent */
+        .parent {
+            position: relative;
+            height: 180px;
+            background-color: #e8f4ff;
+            border: 2px solid #0066cc;
+            padding: 20px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            padding: 15px;
+            background-color: #0066cc;
+            color: white;
+        }
+
+        /* Modal / Popup */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            padding: 25px;
+            background-color: white;
+            border: 3px solid #333;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Sticky Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 190px;
+            right: 0;
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 800;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 15px;
+            }
+
+            .sidebar h2 {
+                margin: 5px 0;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            header {
+                margin-left: 0;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 20px 15px;
+            }
+
+            footer {
+                left: 0;
+            }
+
+            .relative-box {
+                left: 10px;
+            }
+
+            .modal {
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+        <h2>Navigation</h2>
+        <a href="#tables">Tables</a>
+        <a href="#position">Position</a>
+    </aside>
+
+    <!-- Sticky Header -->
+    <header>
+        <h1>CSS Tables and Position</h1>
+    </header>
+
+    <main>
+
+        <!-- Tables -->
+        <section id="tables">
+
+            <h2>Styled HTML Table</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Rahul</td>
+                            <td>Web Development</td>
+                            <td>A</td>
+                            <td>Completed</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ananya</td>
+                            <td>Java</td>
+                            <td>B+</td>
+                            <td>Completed</td>
+                        </tr>
+
+                        <tr>
+                            <td>Arjun</td>
+                            <td>Python</td>
+                            <td>A+</td>
+                            <td>Completed</td>
+                        </tr>
+
+                        <tr>
+                            <td>Priya</td>
+                            <td>CSS</td>
+                            <td>A</td>
+                            <td>In Progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Position -->
+        <section id="position">
+
+            <h2>CSS Position Examples</h2>
+
+            <h3>Relative Position</h3>
+
+            <div class="relative-box">
+                Relative Element
+            </div>
+
+            <h3>Absolute Position</h3>
+
+            <div class="parent">
+                Parent Container
+
+                <div class="absolute-box">
+                    Absolutely Positioned
+                </div>
+            </div>
+
+            <h3>Positioning Concepts</h3>
+
+            <p>
+                The sidebar uses fixed positioning, the header uses sticky
+                positioning, the yellow box uses relative positioning,
+                and the blue box uses absolute positioning.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Centered Popup / Modal -->
+    <div class="modal">
+        <h2>CSS Positioning</h2>
+        <p>This popup demonstrates fixed positioning and z-index.</p>
+        <button onclick="this.parentElement.style.display='none'">
+            Close
+        </button>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer>
+        CSS Tables and Position Task
+    </footer>
+
+</body>
+</html>
