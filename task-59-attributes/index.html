@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML attributes practical example">
+    <meta name="author" content="Student">
+    <title>HTML Attributes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        section {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        a {
+            color: #0066cc;
+        }
+
+        img {
+            width: 100%;
+            max-width: 350px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+
+        .attribute-list {
+            line-height: 1.8;
+        }
+
+        footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header id="top">
+            <h1 class="page-title">HTML Attributes</h1>
+            <p title="This paragraph demonstrates the title attribute">
+                Attributes provide additional information about HTML elements.
+            </p>
+        </header>
+
+        <!-- Link Attributes -->
+        <section id="links">
+
+            <h2>Link Attributes</h2>
+
+            <a
+                href="https://www.example.com"
+                target="_blank"
+                title="Open Example Website"
+                rel="noopener noreferrer"
+            >
+                Visit Example Website
+            </a>
+
+        </section>
+
+        <!-- Image Attributes -->
+        <section id="images">
+
+            <h2>Image Attributes</h2>
+
+            <img
+                src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e"
+                alt="Green leaves in nature"
+                title="Nature Image"
+                loading="lazy"
+            >
+
+        </section>
+
+        <!-- List Attributes -->
+        <section id="lists">
+
+            <h2>List Attributes</h2>
+
+            <ol start="5">
+                <li value="5">HTML</li>
+                <li value="6">CSS</li>
+                <li value="7">JavaScript</li>
+            </ol>
+
+        </section>
+
+        <!-- Form Attributes -->
+        <section id="form">
+
+            <h2>Form Attributes</h2>
+
+            <form action="#" method="get" autocomplete="on">
+
+                <label for="name">Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                    minlength="3"
+                    maxlength="30"
+                    autocomplete="name"
+                >
+
+                <br><br>
+
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    autocomplete="email"
+                >
+
+                <br><br>
+
+                <label for="course">Course</label>
+
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+
+                <br><br>
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message"
+                    rows="5"
+                    maxlength="200"
+                ></textarea>
+
+                <br><br>
+
+                <button
+                    type="submit"
+                    title="Submit the form"
+                >
+                    Submit
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Global Attributes -->
+        <section id="global">
+
+            <h2>Common Attributes Used</h2>
+
+            <ul class="attribute-list">
+                <li><strong>id:</strong> Identifies a unique element.</li>
+                <li><strong>class:</strong> Groups elements for styling.</li>
+                <li><strong>title:</strong> Provides additional information.</li>
+                <li><strong>style:</strong> Adds inline styling.</li>
+                <li><strong>lang:</strong> Defines the language of content.</li>
+                <li><strong>hidden:</strong> Hides an element.</li>
+                <li><strong>data-*:</strong> Stores custom data.</li>
+            </ul>
+
+            <p
+                id="custom-data"
+                class="data-example"
+                data-course="HTML"
+                data-level="Beginner"
+            >
+                This element uses custom data attributes.
+            </p>
+
+        </section>
+
+        <footer id="footer">
+
+            <p>
+                <a href="#top" title="Go back to the top">
+                    Back to Top
+                </a>
+            </p>
+
+            <p>HTML Attributes Practical Task</p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
