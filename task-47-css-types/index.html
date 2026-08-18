@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Types</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-css {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Different Types of CSS</h1>
+
+        <!-- Inline CSS -->
+        <p style="color: red; font-size: 20px; font-weight: bold;">
+            This paragraph uses Inline CSS.
+        </p>
+
+        <!-- Internal CSS -->
+        <p class="internal-css">
+            This paragraph uses Internal CSS.
+        </p>
+
+        <!-- External CSS -->
+        <p class="external-css">
+            This paragraph uses External CSS.
+        </p>
+
+        <div class="info">
+            <h2>CSS Types</h2>
+            <ul>
+                <li>Inline CSS</li>
+                <li>Internal CSS</li>
+                <li>External CSS</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
