@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        /* Grouping Selector */
+        h1, h2 {
+            color: #333;
+        }
+
+        /* ID Selector */
+        #main-title {
+            font-size: 32px;
+        }
+
+        /* Class Selector */
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+
+        /* Descendant Selector */
+        .box p {
+            color: green;
+        }
+
+        /* Child Selector */
+        .list > li {
+            margin: 8px;
+        }
+
+        /* Adjacent Sibling Selector */
+        h2 + p {
+            font-style: italic;
+        }
+
+        /* General Sibling Selector */
+        h2 ~ p {
+            line-height: 1.6;
+        }
+
+        /* Pseudo-class Selector */
+        button:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Pseudo-element Selector */
+        .description::first-letter {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            #main-title {
+                font-size: 26px;
+            }
+
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="main-title">CSS Selectors</h1>
+
+        <h2>Different Types of Selectors</h2>
+
+        <p class="description">
+            This page demonstrates different CSS selectors.
+        </p>
+
+        <p class="highlight">
+            This paragraph uses a class selector.
+        </p>
+
+        <div class="box">
+            <p>This paragraph demonstrates a descendant selector.</p>
+
+            <ul class="list">
+                <li>Universal Selector</li>
+                <li>Element Selector</li>
+                <li>Class Selector</li>
+                <li>ID Selector</li>
+                <li>Attribute Selector</li>
+                <li>Combinator Selectors</li>
+                <li>Pseudo-class Selector</li>
+                <li>Pseudo-element Selector</li>
+            </ul>
+        </div>
+
+        <input type="text" placeholder="Attribute selector">
+
+        <br>
+
+        <button>Hover Me</button>
+
+    </div>
+
+</body>
+</html>
