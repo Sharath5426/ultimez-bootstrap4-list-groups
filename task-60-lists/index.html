@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML ordered and unordered lists">
+    <title>HTML Lists</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .ordered {
+            background-color: #eef6ff;
+        }
+
+        .unordered {
+            background-color: #effff2;
+        }
+
+        .nested {
+            background-color: #fff8e8;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>HTML Lists</h1>
+
+        <!-- Ordered List -->
+        <section class="ordered">
+
+            <h2>Ordered List</h2>
+
+            <p>
+                An ordered list displays items in a numbered sequence.
+            </p>
+
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn JavaScript</li>
+                <li>Build Projects</li>
+                <li>Deploy Projects</li>
+            </ol>
+
+        </section>
+
+        <!-- Unordered List -->
+        <section class="unordered">
+
+            <h2>Unordered List</h2>
+
+            <p>
+                An unordered list displays items using bullet points.
+            </p>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Java</li>
+            </ul>
+
+        </section>
+
+        <!-- Nested Lists -->
+        <section class="nested">
+
+            <h2>Nested Lists</h2>
+
+            <ol>
+                <li>
+                    Frontend Development
+
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Backend Development
+
+                    <ul>
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>MySQL</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Tools
+
+                    <ul>
+                        <li>VS Code</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </li>
+            </ol>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
