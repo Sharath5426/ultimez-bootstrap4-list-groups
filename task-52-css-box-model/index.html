@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: white;
+            border: 3px solid #333;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .box-model {
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            border: 8px solid #0066cc;
+            background-color: #e8f4ff;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #d4edda;
+            border: 2px dashed #28a745;
+        }
+
+        .box-model-info {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        .box-model-info div {
+            margin: 10px 0;
+            padding: 12px;
+        }
+
+        .content-info {
+            background-color: #d4edda;
+        }
+
+        .padding-info {
+            background-color: #fff3cd;
+        }
+
+        .border-info {
+            background-color: #cce5ff;
+        }
+
+        .margin-info {
+            background-color: #f8d7da;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .box-model {
+                width: 100%;
+                padding: 20px;
+                border-width: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Box Model</h1>
+
+        <p>
+            Every HTML element is treated as a box consisting of
+            content, padding, border, and margin.
+        </p>
+
+        <div class="box-model">
+
+            <div class="content">
+                <h2>Content</h2>
+                <p>
+                    This is the content area of the CSS box model.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="box-model-info">
+
+            <h2>Box Model Components</h2>
+
+            <div class="content-info">
+                <strong>1. Content:</strong>
+                The actual text or content inside the element.
+            </div>
+
+            <div class="padding-info">
+                <strong>2. Padding:</strong>
+                Space between the content and the border.
+            </div>
+
+            <div class="border-info">
+                <strong>3. Border:</strong>
+                The boundary surrounding the padding and content.
+            </div>
+
+            <div class="margin-info">
+                <strong>4. Margin:</strong>
+                Space outside the border of the element.
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
