@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors, Text and Fonts</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* Different color declaring types */
+        .named-color {
+            color: red;
+        }
+
+        .hex-color {
+            color: #0066cc;
+        }
+
+        .rgb-color {
+            color: rgb(0, 128, 0);
+        }
+
+        .rgba-color {
+            color: rgba(128, 0, 128, 0.8);
+        }
+
+        /* Font styles */
+        .serif {
+            font-family: Georgia, serif;
+        }
+
+        .sans-serif {
+            font-family: Arial, sans-serif;
+        }
+
+        .monospace {
+            font-family: "Courier New", monospace;
+        }
+
+        .large-text {
+            font-size: 24px;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .italic-text {
+            font-style: italic;
+        }
+
+        /* Text styling */
+        .center-text {
+            text-align: center;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .spacing {
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+
+        .shadow {
+            text-shadow: 2px 2px 4px #999;
+        }
+
+        .box {
+            padding: 20px;
+            margin-top: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .large-text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="center-text shadow">CSS Colors, Text and Fonts</h1>
+
+        <div class="box">
+            <h2>Different Color Types</h2>
+
+            <p class="named-color">Named Color: Red</p>
+            <p class="hex-color">HEX Color: #0066cc</p>
+            <p class="rgb-color">RGB Color: rgb(0, 128, 0)</p>
+            <p class="rgba-color">RGBA Color: rgba(128, 0, 128, 0.8)</p>
+        </div>
+
+        <div class="box">
+            <h2>Different Fonts</h2>
+
+            <p class="serif">This text uses a Serif font.</p>
+            <p class="sans-serif">This text uses a Sans-Serif font.</p>
+            <p class="monospace">This text uses a Monospace font.</p>
+        </div>
+
+        <div class="box">
+            <h2>Different Text Styles</h2>
+
+            <p class="large-text">This is larger text.</p>
+            <p class="bold-text">This is bold text.</p>
+            <p class="italic-text">This is italic text.</p>
+            <p class="uppercase">This text is uppercase.</p>
+            <p class="underline">This text is underlined.</p>
+            <p class="spacing">
+                This paragraph demonstrates letter spacing and line height.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
