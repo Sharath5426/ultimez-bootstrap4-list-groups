@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Backgrounds and Borders</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+
+            /* Page background */
+            background-color: #eaf2f8;
+
+            /* Background image */
+            background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+
+            /* Different border properties */
+            border: 3px solid #333;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+
+            /* Bottom border */
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 15px;
+        }
+
+        .solid-border {
+            border: 3px solid red;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #fff5f5;
+        }
+
+        .dashed-border {
+            border: 3px dashed green;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #f5fff5;
+        }
+
+        .dotted-border {
+            border: 3px dotted blue;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #f5f8ff;
+        }
+
+        .double-border {
+            border: 5px double purple;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #faf5ff;
+        }
+
+        .rounded-border {
+            border: 3px solid #ff8800;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #fff8ed;
+        }
+
+        .background-section {
+            margin-top: 25px;
+            padding: 25px;
+            color: white;
+            text-align: center;
+
+            /* Element background image */
+            background-image: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e");
+            background-size: cover;
+            background-position: center;
+
+            border: 4px solid white;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Backgrounds and Borders</h1>
+
+        <h2>Background Image</h2>
+
+        <div class="background-section">
+            <h2>Background Image Example</h2>
+            <p>
+                This section demonstrates how to use an image as a background.
+            </p>
+        </div>
+
+        <h2>Different Border Styles</h2>
+
+        <div class="solid-border">
+            <strong>Solid Border</strong>
+            <p>This element uses a solid border.</p>
+        </div>
+
+        <div class="dashed-border">
+            <strong>Dashed Border</strong>
+            <p>This element uses a dashed border.</p>
+        </div>
+
+        <div class="dotted-border">
+            <strong>Dotted Border</strong>
+            <p>This element uses a dotted border.</p>
+        </div>
+
+        <div class="double-border">
+            <strong>Double Border</strong>
+            <p>This element uses a double border.</p>
+        </div>
+
+        <div class="rounded-border">
+            <strong>Rounded Border</strong>
+            <p>This element uses border-radius.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
