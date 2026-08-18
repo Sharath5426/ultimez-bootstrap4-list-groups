@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML elements and tags example">
+    <title>HTML Elements</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        section {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        a {
+            color: #0066cc;
+        }
+
+        img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        ul,
+        ol {
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+
+        footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Heading and Paragraph Elements -->
+        <header>
+            <h1>HTML Elements</h1>
+            <p>
+                This page demonstrates different HTML elements
+                and their uses.
+            </p>
+        </header>
+
+        <!-- Text Elements -->
+        <section>
+            <h2>Text Elements</h2>
+
+            <p>
+                This is a paragraph element.
+                <strong>This is bold text.</strong>
+                <em>This is emphasized text.</em>
+            </p>
+
+            <p>
+                <mark>This text is highlighted.</mark>
+                <small>This is small text.</small>
+            </p>
+
+            <hr>
+
+            <p>
+                H<sub>2</sub>O uses a subscript element.
+                E = mc<sup>2</sup> uses a superscript element.
+            </p>
+        </section>
+
+        <!-- Link and Image Elements -->
+        <section>
+            <h2>Link and Image Elements</h2>
+
+            <p>
+                Visit
+                <a href="https://www.example.com" target="_blank">
+                    Example Website
+                </a>
+            </p>
+
+            <img
+                src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e"
+                alt="Green leaves"
+            >
+        </section>
+
+        <!-- List Elements -->
+        <section>
+            <h2>List Elements</h2>
+
+            <h3>Unordered List</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn JavaScript</li>
+            </ol>
+        </section>
+
+        <!-- Table Elements -->
+        <section>
+            <h2>Table Elements</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Rahul</td>
+                        <td>HTML</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya</td>
+                        <td>CSS</td>
+                        <td>A+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form Elements -->
+        <section>
+            <h2>Form Elements</h2>
+
+            <form>
+
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <br><br>
+
+                <label for="course">Course</label>
+                <select id="course">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                </select>
+
+                <br><br>
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    placeholder="Enter your message"
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Semantic Elements -->
+        <section>
+            <h2>Semantic Elements</h2>
+
+            <article>
+                <h3>Article</h3>
+                <p>
+                    The article element represents independent content.
+                </p>
+            </article>
+
+            <aside>
+                <h3>Aside</h3>
+                <p>
+                    The aside element contains related information.
+                </p>
+            </aside>
+        </section>
+
+        <footer>
+            <p>HTML Elements Practical Task</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
