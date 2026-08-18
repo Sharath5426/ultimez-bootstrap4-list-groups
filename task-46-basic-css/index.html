@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic CSS Syntax</title>
+
+    <style>
+        /* CSS Syntax:
+           selector {
+               property: value;
+           }
+        */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .box {
+            background-color: white;
+            width: 80%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Basic CSS Syntax</h1>
+
+    <div class="box">
+        <p>
+            CSS is used to style HTML elements.
+        </p>
+
+        <p class="highlight">
+            CSS Syntax: selector { property: value; }
+        </p>
+
+        <button>CSS Example</button>
+    </div>
+
+</body>
+</html>
