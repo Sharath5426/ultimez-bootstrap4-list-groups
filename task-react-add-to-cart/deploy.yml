@@ -1,9 +1,12 @@
-name: Deploy React App to GitHub Pages
+name: Deploy React Add To Cart
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'task-react-add-to-cart/**'
+      - '.github/workflows/deploy-react.yml'
 
 permissions:
   contents: read
@@ -29,14 +32,14 @@ jobs:
         working-directory: task-react-add-to-cart
         run: npm ci
 
-      - name: Build
+      - name: Build React app
         working-directory: task-react-add-to-cart
         run: npm run build
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload React build
         uses: actions/upload-pages-artifact@v3
         with:
           path: task-react-add-to-cart/dist
